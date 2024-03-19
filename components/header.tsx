@@ -4,6 +4,7 @@ import classNames from "classnames";
 import { BsList } from "react-icons/bs"
 import { UserNav } from "./usernav";
 import { ThemeSwitcher } from "./theme-switcher";
+import { Input } from "./ui/input";
 
 export default function Header() {
 
@@ -22,8 +23,13 @@ export default function Header() {
                 <button onClick={sidebarToggle} className="order-2 sm:order-1 shrink-btn float-right bg-sidebar-muted text-sidebar-muted-foreground hover:bg-foreground hover:text-background ml-3 rounded-md w-[30px] h-[30px] flex items-center justify-center shadow-md shadow-black/10  transition duration-300 ease-in-out">
                     <BsList />
                 </button>
-
+            
                 <div className="flex items-center justify-between sm:order-2 order-1">
+                <Input
+                 type="search"
+                 placeholder="Search..."
+                 className="md:w-[100px] lg:w-[300px]"
+                    />
                     <div className="p-2">
                         <ThemeSwitcher></ThemeSwitcher>
                     </div>

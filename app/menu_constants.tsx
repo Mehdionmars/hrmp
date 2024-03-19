@@ -1,6 +1,6 @@
 import { SideNavItemGroup } from "@/types/type";
 import { User } from "lucide-react";
-import { BsEnvelope, BsGear, BsHouseDoor, BsKanban, BsListUl, BsQuestionCircle } from "react-icons/bs";
+import { BsEnvelope, BsGear, BsHouseDoor, BsKanban, BsListUl, BsQuestionCircle, BsTablet } from "react-icons/bs";
 import { FiActivity, FiCalendar, FiDollarSign, FiUsers   } from "react-icons/fi";
 
 
@@ -18,13 +18,13 @@ export const SIDENAV_ITEMS: SideNavItemGroup[] = [
         title: "Manage",
         menuList: [
             {
-                title: 'Products',
-                path: '/products',
-                icon: <BsKanban size={20} />,
-                submenu: true,
+                title: 'Tasks',
+                path: '/tasks',
+                icon: <BsTablet size={20} />,
+                submenu: false,
                 subMenuItems: [
-                    { title: 'All', path: '/products' },
-                    { title: 'New', path: '/products/new' },
+                    { title: 'All', path: '/tasks' },
+                    { title: 'New', path: '/tasks/new' },
                 ],
             },
             {

@@ -3,28 +3,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Overview } from './components/overview'
 import { RecentSales } from './components/recent-sales'
 import { Input } from '@/components/ui/input'
+import { siteConfig } from '@/components/ui/site'
 
 
 export default function Home() {
   return (
     <>
-        <div className="relative w-80">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-500 left-3"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-        />
-      </svg>
-      <Input type="text" placeholder="Search" className="pl-12 pr-4" />
-    </div>
        <h2 className="text-3xl font-bold tracking-tight my-4">Dashboard</h2>
 
       <div className="flex-1 space-y-4">
@@ -154,6 +138,31 @@ export default function Home() {
           </Card>
         </div>
       </div>
+      <footer className="py-6 md:px-8 md:py-0">
+      <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+        <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
+          Built by {""}
+          <a
+            href={siteConfig.links.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium underline underline-offset-4"
+          >
+             Mehdi
+          </a>
+          . The source code is available on{" "}
+          <a
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium underline underline-offset-4"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
+    </footer>
     </>
   )
 }
