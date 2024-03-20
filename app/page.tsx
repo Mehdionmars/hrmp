@@ -1,9 +1,14 @@
 
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Overview } from './components/overview'
 import { RecentSales } from './components/recent-sales'
 import { Input } from '@/components/ui/input'
 import { siteConfig } from '@/components/ui/site'
+import { useMutation } from 'convex/react'
+import { use, useEffect } from 'react'
+import { api } from '@/convex/_generated/api';
 
 
 export default function Home() {
